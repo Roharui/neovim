@@ -46,6 +46,9 @@ lua require('neoscroll').setup{}
 " Ai Editor
 " lua require('codecompanion').setup{}
 
+" Vim Airline
+let g:airline_section_z = ''
+
 au Filetype * setlocal ts=2 sts=2 sw=2
 autocmd TermOpen * setlocal nonumber norelativenumber
 autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
