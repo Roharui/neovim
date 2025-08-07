@@ -4,8 +4,11 @@ set list
 set lcs+=space:·
 set number
 set cursorline
-set tabstop=2
-set shiftwidth=2
+set cindent
+set smartindent
+set expandtab
+set tabstop=4
+set shiftwidth=4
 set encoding=utf8
 set termguicolors
 set clipboard+=unnamedplus
@@ -25,6 +28,7 @@ Plug 'nvim-lua/plenary.nvim'
 Plug 'olimorris/codecompanion.nvim'
 Plug 'karb94/neoscroll.nvim'
 Plug 'github/copilot.vim'
+Plug 'tpope/vim-unimpaired'
 
 call plug#end()
 
@@ -49,9 +53,8 @@ lua require('neoscroll').setup{}
 " Vim Airline
 let g:airline_section_z = ''
 
-au Filetype * setlocal ts=2 sts=2 sw=2
+" No Number in Termimal
 autocmd TermOpen * setlocal nonumber norelativenumber
-autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
 
 " [Vim Config]
 cnoreabbrev evimcon e $MYVIMRC<CR>
