@@ -14,6 +14,12 @@ set termguicolors
 set clipboard+=unnamedplus
 set mouse=
 
+lua << EOF
+vim.cmd [[let &shell = '"C:/Program Files/Git/bin/bash.exe"']]
+vim.cmd [[let &shellcmdflag = '-s']]
+vim.lsp.set_log_level("debug")
+EOF
+
 call plug#begin()
 
 Plug 'scrooloose/nerdtree'
