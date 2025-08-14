@@ -13,6 +13,7 @@ set encoding=utf8
 set termguicolors
 set clipboard+=unnamedplus
 set mouse=
+set guifont=FiraCode\ Nerd\ Font\ Mono:h12
 
 call plug#begin()
 
@@ -29,6 +30,7 @@ Plug 'olimorris/codecompanion.nvim'
 Plug 'karb94/neoscroll.nvim'
 Plug 'github/copilot.vim'
 Plug 'tpope/vim-unimpaired'
+Plug 'ryanoasis/vim-devicons'
 
 call plug#end()
 
