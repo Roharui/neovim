@@ -1,10 +1,11 @@
 {
-	"languageserver": {
-  	"coc-clangd": {
-	  	"command": "clangd",
-    	"rootPatterns": ["compile_flags.txt", "compile_commands.json"],
-    	"filetypes": ["c", "cc", "cpp", "c++", "objc", "objcpp"]
-  	}
-  },
-  "snippets.ultisnips.pythonPrompt": false
+    "languageserver": {
+        "coc-clangd": {
+            "command": "clangd",
+            "rootPatterns": ["compile_flags.txt", "compile_commands.json"],
+            "filetypes": ["c", "cc", "cpp", "c++", "objc", "objcpp"]
+        }
+    },
+    "coc.preferences.formatOnSaveFiletypes": ["css", "markdown", "json", "yaml", "html", "javascript", "typescript", "typescriptreact", "python"],
+    "snippets.ultisnips.pythonPrompt": false
 }

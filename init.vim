@@ -7,13 +7,12 @@ set cursorline
 set cindent
 set smartindent
 set expandtab
-set tabstop=4
-set shiftwidth=4
+set tabstop=2
+set shiftwidth=2
 set encoding=utf8
 set termguicolors
 set clipboard+=unnamedplus
 set mouse=
-set guifont=FiraCode\ Nerd\ Font\ Mono:h12
 
 call plug#begin()
 
@@ -22,20 +21,26 @@ Plug 'akinsho/toggleterm.nvim', {'tag':'*'}
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'sonph/onehalf', {'rtp': 'vim/'}
+Plug 'shaunsingh/nord.nvim'
 Plug 'airblade/vim-gitgutter'
 Plug 'lukas-reineke/indent-blankline.nvim'
-Plug 'vim-airline/vim-airline'
+
+Plug 'nvim-lualine/lualine.nvim'
+Plug 'nvim-tree/nvim-web-devicons'
+
 Plug 'nvim-lua/plenary.nvim'
 Plug 'olimorris/codecompanion.nvim'
 Plug 'karb94/neoscroll.nvim'
 Plug 'github/copilot.vim'
 Plug 'tpope/vim-unimpaired'
-Plug 'ryanoasis/vim-devicons'
+" Plug 'ryanoasis/vim-devicons'
 
 call plug#end()
 
+let g:nord_italic = v:false
+
 " Theme
-colorscheme onehalfdark
+colorscheme nord 
 
 " No Comment Italic
 lua vim.api.nvim_set_hl(0, "Comment", { fg = "#5c6370", italic = false })
@@ -49,11 +54,17 @@ lua require("toggleterm").setup{ open_mapping = [[<C-j>]], direction = 'float' }
 " Smooth Scroll
 lua require('neoscroll').setup{}
 
+" Lualine
+lua << END
+require('lualine').setup(
+  {
+    options = { theme  = 'nord' },
+  }
+)
+END
+
 " Ai Editor
 " lua require('codecompanion').setup{}
-
-" Vim Airline
-let g:airline_section_z = ''
 
 " No Number in Termimal
 autocmd TermOpen * setlocal nonumber norelativenumber
