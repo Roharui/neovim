@@ -33,7 +33,11 @@ Plug 'olimorris/codecompanion.nvim'
 Plug 'karb94/neoscroll.nvim'
 Plug 'github/copilot.vim'
 Plug 'tpope/vim-unimpaired'
-" Plug 'ryanoasis/vim-devicons'
+Plug 'ryanoasis/vim-devicons'
+
+" Command Palette
+" Plug "kkharji/sqlite.lua"
+" Plug "mrjones2014/legendary.nvim"
 
 call plug#end()
 
